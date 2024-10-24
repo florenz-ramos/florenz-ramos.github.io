@@ -10,19 +10,63 @@ body {
     background-color: #f4f4f4;
     color: #333;
 }
-
 header {
-    background: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    position: relative;
+    background-color: #333; /* Dark background for header */
+    color: white; /* White text color */
+    padding: 20px 0; /* Padding for top and bottom */
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    max-width: 1200px; /* Max width for navigation */
+    margin: 0 auto; /* Center navigation */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center items vertically */
+    padding: 0 20px; /* Horizontal padding */
+}
+
+.nav-links {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Display links in a row */
+}
+
+.nav-links li {
+    margin: 0 15px; /* Space between links */
+}
+
+.nav-links a {
+    color: white; /* White link color */
+    text-decoration: none; /* Remove underline */
+    font-size: 18px; /* Font size for links */
+}
+
+.download-btn {
+    background-color: #ff6347; /* Button color */
+    color: white; /* Button text color */
+    padding: 10px 10px; /* Padding for the button */
+    border-radius: 5px; /* Rounded button corners */
+    text-decoration: none; /* Remove underline */
+    font-size: 18px; /* Font size for button */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+
+
+.download-btn:hover {
+    background-color: #e5533d; /* Darker color on hover */
+}
+
+.hamburger {
+    display: none; /* Initially hide the hamburger menu */
+    flex-direction: column; /* Stack lines vertically */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.line {
+    height: 3px; /* Height of each line */
+    width: 25px; /* Width of each line */
+    background-color: white; /* Color of each line */
+    margin: 4px; /* Space between lines */
 }
 
 .logo {
@@ -45,12 +89,6 @@ nav ul li a {
     font-size: 18px;
 }
 
-.hamburger {
-    display: none;
-    font-size: 28px;
-    color: #fff;
-    cursor: pointer;
-}
 
 .about-section, .projects-section, .contact-section {
     padding: 40px;
@@ -258,10 +296,19 @@ button:hover {
     .project-card {
         width: 100%; /* One card per row on small screens */
     }
+    .logo{
+        font-size: 15px;
+    }
 }
 
 @media (max-width: 768px) {
 
+    .nav-links {
+        display: none; /* Hide links initially on small screens */
+    }
+    .hamburger {
+        display: flex; /* Show hamburger menu */
+    }
 
     .social-links {
         flex-direction: column;  /* Stacks the social links vertically on small screens */
@@ -292,9 +339,6 @@ button:hover {
         margin: 15px 0;
     }
 
-    .hamburger {
-        display: block;
-    }
 
     nav.active ul {
         display: flex;
