@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.hamburger {
+    display: none;
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.about-section, .projects-section, .contact-section {
+    padding: 40px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.project {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: inline-block;
+    width: 200px;
+    height: 150px;
+}
+
+.project h3 {
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+
+/* Social links section */
+#contact {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+#contact h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Social links container */
+.social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;  /* Allows the links to wrap on smaller screens */
+    gap: 20px;
+}
+
+/* Style for each social link */
+.social-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 24px;
+    padding: 10px 20px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    min-width: 150px;  /* Ensures buttons are large enough on small screens */
+    text-align: center; /* Centers the text within each button */
+}
+
+/* Hover effects */
+.social-links a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Icon spacing */
+.social-links i {
+    margin-right: 10px;
+}
+
+#about {
+    max-width: 800px; /* Limit the width for better readability */
+    margin: 40px auto 0;
+    padding: 40px 20px;
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 8px; /* Rounded corners for a softer look */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+#about h2 {
+    font-size: 32px; /* Larger font size for the heading */
+    margin-bottom: 20px;
+    color: #333; /* Dark text color */
+    text-align: left; /* Align left for a professional look */
+}
+
+#about h3 {
+    font-size: 24px;
+    margin-top: 20px;
+    color: #555; /* Slightly lighter color for subheadings */
+    text-align: left; /* Align left */
+}
+
+#about p, #about ul {
+    font-size: 16px; /* Base font size for readability */
+    line-height: 1.6; /* Increase line height for better spacing */
+    color: #666; /* Slightly lighter text color */
+    text-align: left; /* Align left */
+}
+
+#about ul {
+    list-style-type: disc; /* Use bullet points for lists */
+    padding-left: 20px; /* Padding for the list */
+}
+
+#about ul li {
+    margin: 10px 0; /* Space between list items */
+}
+
+
+#projects {
+    max-width: 1200px; /* Limit the width for larger screens */
+    margin: 40px auto; /* Center the section with top margin */
+    padding: 40px 20px;
+    text-align: center; /* Center titles and descriptions */
+}
+
+#projects h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.project-card {
+    background-color: #f9f9f9; /* Light background for cards */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    margin: 10px; /* Space between cards */
+    padding: 20px; /* Internal padding */
+    transition: transform 0.3s; /* Smooth hover effect */
+    display: inline-block; /* Align cards in a row */
+    width: calc(33.333% - 40px); /* Responsive width for three cards per row */
+    vertical-align: top; /* Align cards at the top */
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.project-card h3 {
+    font-size: 24px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.project-card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff; /* Primary button color */
+    color: #fff; /* Button text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded button corners */
+    transition: background-color 0.3s; /* Smooth color transition */
+}
+
+.project-card a:hover {
+    background-color: #0056b3; /* Darker color on hover */
+}
+
+
+/* Media Queries for responsiveness */
+@media (max-width: 480px) {
+    .project-card {
+        width: 100%; /* One card per row on small screens */
+    }
+}
+
+@media (max-width: 768px) {
+
+
+    .social-links {
+        flex-direction: column;  /* Stacks the social links vertically on small screens */
+        gap: 15px;
+    }
+
+    #contact h2 {
+        font-size: 24px;
+    }
+
+    .social-links a {
+        font-size: 20px;
+        padding: 12px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    nav.active ul {
+        display: flex;
+    }
+
+    .header-content h1 {
+        font-size: 32px;
+    }
+
+    .header-content p {
+        font-size: 18px;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 0;
+        display: block;
+    }
+
+}
